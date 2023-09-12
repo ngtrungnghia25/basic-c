@@ -1,5 +1,5 @@
 /*
-BÀI 12 - CHƯƠNG 4
+BÀI 15 - CHƯƠNG 4
 */
 #include <stdio.h>
 #include <Windows.h> //Dùng để hiển thị tiếng việt
@@ -21,15 +21,23 @@ int main() {
     {
         max_day = 30;
     }
-    
-    if (day > max_day) //Nếu ngày vừa nhập lớn hơn ngày tối đa trong tháng thì không hợp lệ
+
+    if (day + 1 <= max_day) //Nếu ngày đã nhập + 1 nhỏ hơn bằng ngày lớn nhất
     {
-        printf("Ngày vừa nhập không hợp lệ!");
+        day++; //Ngày đã nhập + 1
     }
-    else
+    else //Ngược lại
     {
-        printf("Ngày vừa nhập hợp lệ!");
+        day = 1; //(Qua tháng sau) ngày bằng 1
+        month ++; //Tháng cộng thêm 1
+        if (month > 12) //Nếu tháng cộng thêm 1 mà lớn hơn 12
+        {
+            month = 1; //Tháng = 1 (Qua năm sau)
+            year++; //Năm + 1
+        }
     }
 
+    printf("Ngày mai là: %d/%d/%d", day, month, year);
+    
     return 0;
 }
