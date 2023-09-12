@@ -1,14 +1,19 @@
-//Bài 6 chương 1
+/*
+BÀI 6 - CHƯƠNG 3
+*/
 #include <stdio.h>
+#include <Windows.h> //Dùng để hiển thị tiếng việt
 
 int main() {
+    SetConsoleOutputCP(65001); //Dùng để hiển thị tiếng việt
+    
     char c;
 
-    printf("Nhap vao 1 ky tu: ");
+    printf("Nhập vào 1 ký tự: ");
     scanf("%c", &c); //Nhập vào ký tự 
 
-    printf("Ma ascii cua '%c' la %d\n", c, c);
-    printf("Ky tu tiep theo la: %c", (int)c + 1);
+    printf("Mã ASCII của '%c' là %d\n", c, c);
+    printf("Ký tự tiếp theo là: %c", (int)c + 1);
 
     return 0;
 }

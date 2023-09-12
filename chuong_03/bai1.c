@@ -1,4 +1,6 @@
-//Bài 1 chương 1
+/*
+BÀI 1 - CHƯƠNG 3
+*/
 #include <stdio.h>
 
 int main() {

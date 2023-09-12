@@ -1,10 +1,15 @@
-//Bài 10 chương 1
+/*
+BÀI 10 - CHƯƠNG 3
+*/
 #include <stdio.h>
+#include <Windows.h> //Dùng để hiển thị tiếng việt
 
 int main() {
+    SetConsoleOutputCP(65001); //Dùng để hiển thị tiếng việt
+    
     int i;
 
-    printf("Nhap vao 1 so nguyen co 3 chu so: ");
+    printf("Nhập vào 1 số nguyên: ");
     scanf("%d", &i); //Nhập vào 1 số nguyên VD: 456
 
     int tram, chuc, don_vi;
