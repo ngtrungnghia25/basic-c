@@ -14,7 +14,7 @@ int main() {
     int a[m][n];
     int b[m][n];
 
-    printf("\n ----- MẢNG 2 CHIỀU A -----\n");
+    printf("\n ----- MA TRẬN A -----\n");
     for (int i = 0; i < m; i++)
     {
         printf("*** HÀNG %d *** \n", i + 1);
@@ -25,7 +25,7 @@ int main() {
         }        
     }
 
-    printf("\n ----- MẢNG 2 CHIỀU B -----\n");
+    printf("\n ----- MA TRẬN B -----\n");
     for (int i = 0; i < m; i++)
     {
         printf("*** HÀNG %d *** \n", i + 1);
