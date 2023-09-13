@@ -1,0 +1,202 @@
+{
+	"Create C Program Vietnamese": {
+		"prefix": "@vn-create",
+		"body": [
+		  "/*",
+		  "BÀI $1 - CHƯƠNG $2",
+		  "*/",
+		  "#include <stdio.h>",
+		  "#include <Windows.h> //Dùng để hiển thị tiếng việt",
+		  "",
+		  "int main() {",
+		  "    SetConsoleOutputCP(65001); //Dùng để hiển thị tiếng việt",
+		  "",
+		  "    $0",
+		  "",
+		  "    return 0;",
+		  "}"
+		],
+		"description": "Create C Program Vietnamese"
+	},
+	"Create C Program": {
+		"prefix": "@create",
+		"body": [
+		  "#include <stdio.h>",
+		  "",
+		  "int main() {",
+		  "    $0",
+		  "    return 0;",
+		  "}"
+		],
+		"description": "Create C Program"
+	},
+	"Printf": {
+		"prefix": "@in",
+		"body": [
+			"printf(\"$1\");",
+			"$0",	
+		],
+		"description": "Print"
+	},
+	"Printf and scanf": {
+		"prefix": "@in xuat",
+		"body": [
+			"printf(\"$1\");",
+			"scanf(\"%${2:d}\", &$3);",
+			"$0",	
+		],
+		"description": "Xuất và nhập"
+	},
+	"Printf value": {
+		"prefix": "@inv",
+		"body": [
+			"printf(\"$1\", $2);",
+			"$0",	
+		],
+		"description": "Print value"
+	},
+	"Scanf": {
+		"prefix": "@nhap",
+		"body": [
+			"scanf(\"%${1:d}\", &$2);",
+			"$0",
+		],
+		"description": "Scanf"
+	},
+	"Scanf 2": {
+		"prefix": "@2nhap",
+		"body": [
+			"scanf(\"%${1:d}%${1:d}\", &$2, &$3);",
+			"$0",
+		],
+		"description": "Scanf 2"
+	},
+	"Scanf 3": {
+		"prefix": "@3nhap",
+		"body": [
+			"scanf(\"%${1:d}%${1:d}%${1:d}\", &$2, &$3, &$4);",
+			"$0",
+		],
+		"description": "Scanf 3"
+	},
+	"Input Array": {
+		"prefix": "@input array",
+		"body": [
+		  "for (int i = 0; i < ${1:lenght}; i++)",
+		  "{",
+		  "    scanf(\"${2:%d}\", &${3:a}[i]);",
+		  "}"
+		],
+		"description": "Input Array"
+	},
+	"Print Array": {
+		"prefix": "@print array",
+		"body": [
+		  "for (int i = 0; i < ${1:lenght}; i++)",
+		  "{",
+		  "    printf(\"Phan tu ${2:a}[%d] la %d\\n\", i, ${2:a}[i]);",
+		  "}"
+		],
+		"description": "Print Array"
+	},
+	"Input Array Function": {
+		"prefix": "@input array function",
+		"body": [
+		  "void inputArray(${1:int} a[], int lenght) {",
+		  "    for (int i = 0; i < lenght; i++)",
+		  "    {",
+		  "        scanf(\"${2:%d}\", &a[i]);",
+		  "    }",
+		  "}"
+		],
+		"description": "Input Array Function"
+	},
+	"Print Array Function": {
+		"prefix": "@print array function",
+		"body": [
+		  "void printArray(${1:int} a[], int lenght) {",
+		  "    for (int i = 0; i < lenght; i++)",
+		  "    {",
+		  "        printf(\"Phan tu a[%d] la ${2:%d}\\n\", i, a[i]);",
+		  "    }",
+		  "}"
+		],
+		"description": "Print Array Function"
+	},
+	"Sum Array Function": {
+		"prefix": "@sum array function",
+		"body": [
+		  "${1:int} sumArray(${1:int} a[], int lenght) {",
+		  "    ${1:int} sum = 0;",
+		  "    for (int i = 0; i < lenght; i++)",
+		  "    {",
+		  "        sum += a[i];",
+		  "    }",
+		  "    return sum;",
+		  "}"
+		],
+		"description": "Sum Array Function"
+	},
+	"Average Array Function": {
+		"prefix": "@avg array function",
+		"body": [
+		  "double averageArray(${1:int} a[], int lenght) {",
+		  "    double sum = 0;",
+		  "    for (int i = 0; i < lenght; i++)",
+		  "    {",
+		  "        sum += a[i];",
+		  "    }",
+		  "    return (double)sum/lenght;",
+		  "}"
+		],
+		"description": "Average Array Function"
+	},
+	"Find Max Value In Array": {
+		"prefix": "@find max value in array",
+		"body": [
+		  "${0:int} findMaxValue(${0:int} a[], int lenght) {",
+		  "    ${0:int} max = a[0];",
+		  "    for (int i = 1; i < lenght; i++)",
+		  "    {",
+		  "        if(a[i] > max) {",
+		  "            max = a[i];",
+		  "        }",
+		  "    }",
+		  "    return max;",
+		  "}"
+		],
+		"description": "Find Max Value In Array"
+	},
+	"Find Min Value In Array": {
+		"prefix": "@find min value in array",
+		"body": [
+		  "${0:int} findMinValue(${0:int} a[], int lenght) {",
+		  "    ${0:int} min = a[0];",
+		  "    for (int i = 1; i < lenght; i++)",
+		  "    {",
+		  "        if(a[i] < min) {",
+		  "            min = a[i];",
+		  "        }",
+		  "    }",
+		  "    return min;",
+		  "}"
+		],
+		"description": "Find Min Value In Array"
+	},
+	"Count Item In Array": {
+		"prefix": "@count item in array",
+		"body": [
+		  "int countItem(${0:int} value, ${0:int} a[], int lenght) {",
+		  "    int count= 0;",
+		  "    for (int i = 0; i < lenght; i++)",
+		  "    {",
+		  "        if(a[i] == value) {",
+		  "            count++;",
+		  "        }",
+		  "    }",
+		  "    return count;",
+		  "}"
+		],
+		"description": "Count Item In Array"
+	},
+}
