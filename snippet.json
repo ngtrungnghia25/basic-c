@@ -34,7 +34,7 @@
 		"prefix": "@in",
 		"body": [
 			"printf(\"$1\");",
-			"$0",	
+			"$0"
 		],
 		"description": "Print"
 	},
@@ -43,7 +43,7 @@
 		"body": [
 			"printf(\"$1\");",
 			"scanf(\"%${2:d}\", &$3);",
-			"$0",	
+			"$0"
 		],
 		"description": "Xuất và nhập"
 	},
@@ -51,7 +51,7 @@
 		"prefix": "@inv",
 		"body": [
 			"printf(\"$1\", $2);",
-			"$0",	
+			"$0"
 		],
 		"description": "Print value"
 	},
@@ -59,7 +59,7 @@
 		"prefix": "@nhap",
 		"body": [
 			"scanf(\"%${1:d}\", &$2);",
-			"$0",
+			"$0"
 		],
 		"description": "Scanf"
 	},
@@ -67,7 +67,7 @@
 		"prefix": "@2nhap",
 		"body": [
 			"scanf(\"%${1:d}%${1:d}\", &$2, &$3);",
-			"$0",
+			"$0"
 		],
 		"description": "Scanf 2"
 	},
@@ -75,7 +75,7 @@
 		"prefix": "@3nhap",
 		"body": [
 			"scanf(\"%${1:d}%${1:d}%${1:d}\", &$2, &$3, &$4);",
-			"$0",
+			"$0"
 		],
 		"description": "Scanf 3"
 	},
@@ -198,5 +198,5 @@
 		  "}"
 		],
 		"description": "Count Item In Array"
-	},
+	}
 }
