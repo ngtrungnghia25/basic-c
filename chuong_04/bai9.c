@@ -7,7 +7,6 @@ BÀI 9 - CHƯƠNG 4
 int main() {
     SetConsoleOutputCP(65001); //Dùng để hiển thị tiếng việt
 
-    int keo = 2, bao = 1, bua = 0;
     int player1, player2;
 
     printf("Quy tắc: Búa = 0 , Bao = 1, Kéo = 2\n");
