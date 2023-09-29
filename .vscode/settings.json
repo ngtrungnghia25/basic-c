@@ -4,5 +4,6 @@
         "stdio.h": "c",
         "math.h": "c",
         "windows.h": "c"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
