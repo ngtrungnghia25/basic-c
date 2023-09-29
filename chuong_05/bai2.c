@@ -5,16 +5,12 @@ BÀI 2 - CHƯƠNG 5
 #include <Windows.h> //Dùng để hiển thị tiếng việt
 
 int UCLN(int a, int b) {
-    int min = a < b ? a : b;
-    int UCLN = 1;
-    for (int i = 2; i <= min; i++)
+    int u = a < b ? a : b;
+    while (a % u != 0 || b % u != 0)
     {
-        if (a % i == 0 && b % i == 0)
-        {
-            UCLN = i;
-        }
+        u--;
     }
-    return UCLN;
+    return u;
 }
 
 int main() {
